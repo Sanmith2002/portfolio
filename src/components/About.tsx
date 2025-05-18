@@ -36,7 +36,7 @@ const About = () => {
         <div className="grid md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-5">
             <div className="relative">
-              <div className="absolute inset-0 w-full h-full bg-wood rounded-lg -rotate-3 transform-gpu"></div>
+              <div className="absolute inset-0 w-full h-full bg-stone-600 rounded-lg -rotate-3 transform-gpu"></div>
               <img
                 src="/lovable-uploads/70e166e7-26f1-4427-b8d8-ccf1d63c780d.png"
                 alt="Dinura Sanmith"

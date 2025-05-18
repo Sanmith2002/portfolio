@@ -55,7 +55,7 @@ const Hero = () => {
           {/* Glowing Badge */}
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-neon-blue/10 border border-neon-blue/30 animate-fade-in-up animate-delay-100 animate-fill-both animate-once">
             <Sparkles size={16} className="text-neon-blue mr-2" />
-            <span className="text-sm text-neon-blue">Full-Stack Developer & Data Scientist</span>
+            <span className="text-sm text-neon-blue">Full-Stack Developer & Data Science</span>
           </div>
           
           {/* Main Title */}
@@ -130,13 +130,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce">
-        <span className="text-sm mb-2 text-neon-blue">Scroll Down</span>
-        <div className="w-6 h-9 border-2 border-neon-blue rounded-full flex justify-center">
-          <div className="w-1 h-2 bg-neon-blue rounded-full mt-2 animate-float"></div>
-        </div>
-      </div>
+      
     </section>
   );
 };
