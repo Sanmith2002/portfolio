@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from "react";
-import { GitHub, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -71,7 +71,7 @@ const Hero = () => {
                 size="icon"
                 className="rounded-full hover:bg-wood hover:text-white duration-300"
               >
-                <GitHub size={20} />
+                <Github size={20} />
               </Button>
             </a>
             <a href="https://linkedin.com/in/LinkedIn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
