@@ -38,7 +38,7 @@ const About = () => {
             <div className="relative">
               <div className="absolute inset-0 w-full h-full bg-stone-600 rounded-lg -rotate-3 transform-gpu"></div>
               <img
-                src="/lovable-uploads/70e166e7-26f1-4427-b8d8-ccf1d63c780d.png"
+                src="/portfolio/lovable-uploads/mine.png"
                 alt="Dinura Sanmith"
                 className="relative z-10 rounded-lg shadow-lg"
               />
