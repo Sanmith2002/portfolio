@@ -1,10 +1,11 @@
 
 import React, { useEffect, useRef } from "react";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Code, Sparkles, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -34,33 +35,58 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-16 md:pt-0"
     >
-      {/* Background Elements */}
+      {/* Animated Background */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute top-20 right-20 w-64 h-64 rounded-full bg-wood/10 animate-spin-slow blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-96 h-96 rounded-full bg-wood/5 animate-spin-slow blur-3xl"></div>
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full bg-neon-blue/10 animate-spin-slow blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-neon-blue/5 animate-spin-slow blur-3xl"></div>
+        
+        {/* Grid Pattern */}
+        <div 
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: 'linear-gradient(to right, #0EA5E9 1px, transparent 1px), linear-gradient(to bottom, #0EA5E9 1px, transparent 1px)',
+            backgroundSize: '60px 60px'
+          }}
+        ></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 md:gap-16 items-center z-10">
-        <div ref={containerRef} className="space-y-6">
-          <p className="text-xl text-wood animate-fade-in-up animate-delay-100 animate-fill-both animate-once">
-            Hello, I'm
-          </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold animate-fade-in-up animate-delay-200 animate-fill-both animate-once">
-            Dinura Sanmith
-          </h1>
-          <h2 className="text-2xl md:text-3xl font-medium text-muted-foreground animate-fade-in-up animate-delay-300 animate-fill-both animate-once">
-            Data Science & Full-Stack Developer
-          </h2>
-          <p className="text-lg text-balance animate-fade-in-up animate-delay-400 animate-fill-both animate-once">
-            Motivated IT undergraduate with expertise in data science, full-stack development, 
-            and IT coordination. Passionate about creating innovative solutions.
-          </p>
+      <div className="max-w-7xl mx-auto px-6 z-10">
+        <div ref={containerRef} className="flex flex-col items-center text-center space-y-8">
+          {/* Glowing Badge */}
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-neon-blue/10 border border-neon-blue/30 animate-fade-in-up animate-delay-100 animate-fill-both animate-once">
+            <Sparkles size={16} className="text-neon-blue mr-2" />
+            <span className="text-sm text-neon-blue">Full-Stack Developer & Data Scientist</span>
+          </div>
+          
+          {/* Main Title */}
+          <div ref={textRef} className="space-y-4">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold glow-text animate-fade-in-up animate-delay-200 animate-fill-both animate-once">
+              Dinura <span className="text-neon-blue">Sanmith</span>
+            </h1>
+            
+            <p className="text-xl text-balance max-w-2xl mx-auto text-muted-foreground animate-fade-in-up animate-delay-300 animate-fill-both animate-once">
+              Motivated IT undergraduate with expertise in data science, full-stack development, 
+              and IT coordination. Passionate about creating innovative solutions.
+            </p>
+          </div>
+          
+          {/* Tech Stack Icons */}
+          <div className="flex flex-wrap justify-center gap-3 py-6 animate-fade-in-up animate-delay-400 animate-fill-both animate-once">
+            {["React", "Node.js", "MongoDB", "Python", "Java"].map((tech) => (
+              <div key={tech} className="px-4 py-2 bg-secondary rounded-full flex items-center space-x-2 border border-neon-blue/20">
+                <Code size={16} className="text-neon-blue" />
+                <span>{tech}</span>
+              </div>
+            ))}
+          </div>
+          
+          {/* Social Links */}
           <div className="flex space-x-4 pt-2 animate-fade-in-up animate-delay-500 animate-fill-both animate-once">
             <a href="mailto:dinurasanmith2002@outlook.com" aria-label="Email">
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-full hover:bg-wood hover:text-white duration-300"
+                className="rounded-full border-neon-blue/50 text-neon-blue hover:bg-neon-blue hover:text-white duration-300"
               >
                 <Mail size={20} />
               </Button>
@@ -69,7 +95,7 @@ const Hero = () => {
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-full hover:bg-wood hover:text-white duration-300"
+                className="rounded-full border-neon-blue/50 text-neon-blue hover:bg-neon-blue hover:text-white duration-300"
               >
                 <Github size={20} />
               </Button>
@@ -78,48 +104,37 @@ const Hero = () => {
               <Button
                 variant="outline"
                 size="icon"
-                className="rounded-full hover:bg-wood hover:text-white duration-300"
+                className="rounded-full border-neon-blue/50 text-neon-blue hover:bg-neon-blue hover:text-white duration-300"
               >
                 <Linkedin size={20} />
               </Button>
             </a>
           </div>
-          <div className="pt-4 animate-fade-in-up animate-delay-500 animate-fill-both animate-once">
+          
+          {/* Call to Action Buttons */}
+          <div className="pt-6 animate-fade-in-up animate-delay-500 animate-fill-both animate-once">
             <Button
-              className="bg-wood hover:bg-wood-dark text-white rounded-full px-8 py-6 mr-4"
+              className="bg-neon-blue hover:bg-neon-dark text-white rounded-full px-8 py-6 mr-4 shadow-lg shadow-neon-blue/20"
               asChild
             >
               <a href="#contact">Contact Me</a>
             </Button>
             <Button
               variant="outline"
-              className="rounded-full px-8 py-6 border-wood text-wood hover:bg-wood/10"
+              className="rounded-full px-8 py-6 border-neon-blue/50 text-neon-blue hover:bg-neon-blue/10 shadow-lg"
               asChild
             >
               <a href="#projects">My Projects</a>
             </Button>
           </div>
         </div>
-
-        <div className="hidden md:block">
-          <div className="relative">
-            <div className="absolute inset-0 w-full h-full bg-wood rounded-full blur-3xl opacity-20"></div>
-            <div className="relative aspect-square overflow-hidden rounded-2xl border-4 border-wood shadow-xl animate-float">
-              <img
-                src="/lovable-uploads/70e166e7-26f1-4427-b8d8-ccf1d63c780d.png"
-                alt="Dinura Sanmith"
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce">
-        <span className="text-sm mb-2">Scroll Down</span>
-        <div className="w-6 h-9 border-2 border-foreground rounded-full flex justify-center">
-          <div className="w-1 h-2 bg-foreground rounded-full mt-2 animate-float"></div>
+        <span className="text-sm mb-2 text-neon-blue">Scroll Down</span>
+        <div className="w-6 h-9 border-2 border-neon-blue rounded-full flex justify-center">
+          <div className="w-1 h-2 bg-neon-blue rounded-full mt-2 animate-float"></div>
         </div>
       </div>
     </section>
