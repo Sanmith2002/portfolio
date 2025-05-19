@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, MouseEvent } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -18,17 +17,22 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setIsScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Smooth scroll handler reused for desktop & mobile nav links
+  const handleNavClick = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const id = href.replace("#", "");
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+    setIsMenuOpen(false); // Close mobile menu on click (optional)
+  };
+
+  const linkClasses =
+    "relative font-medium text-sm hover:text-wood transition-colors duration-300";
 
   return (
     <header
@@ -46,21 +50,22 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          {navItems.map((item) => (
+          {navItems.map(({ href, label }) => (
             <a
-              key={item.href}
-              href={item.href}
-              className="relative font-medium text-sm hover:text-wood transition-colors duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-[-4px] after:left-0 after:bg-wood after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+              key={href}
+              href={href}
+              onClick={(e) => handleNavClick(e, href)}
+              className={linkClasses}
             >
-              {item.label}
+              {label}
             </a>
           ))}
         </nav>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Toggle */}
         <button
           className="md:hidden text-foreground"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={() => setIsMenuOpen((prev) => !prev)}
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -71,14 +76,14 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-md absolute top-full left-0 right-0 p-5 shadow-md animate-fade-in-up">
           <nav className="flex flex-col space-y-4">
-            {navItems.map((item) => (
+            {navItems.map(({ href, label }) => (
               <a
-                key={item.href}
-                href={item.href}
-                className="text-lg font-medium hover:text-wood transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
+                key={href}
+                href={href}
+                onClick={(e) => handleNavClick(e, href)}
+                className={linkClasses}
               >
-                {item.label}
+                {label}
               </a>
             ))}
           </nav>
