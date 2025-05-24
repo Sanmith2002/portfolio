@@ -13,9 +13,9 @@ const projects = [
     contribution:
       "Implemented the Finance Management module for NexaBiz, enabling seamless payment tracking, clear status updates, multi-method payment support, and automated reminders.",
     technologies: ["MERN Stack", "Tailwind", "VS Code", "Git", "MongoDB Compass", "Postman"],
-    image: "/placeholder.svg",
+    image: "/portfolio/lovable-uploads/nexabizL.png",
     links: {
-      github: "#",
+      github: "https://github.com/itp-ProjectGroup/nexxabiz1.1",
       demo: "#",
     },
   },
@@ -26,9 +26,9 @@ const projects = [
     description:
       "A simple Kotlin app to track income, expenses, and savings. It offers category-wise analysis, budget tracking with alerts, and daily reminders. Data is saved with Shared Preferences and backed up via internal storage.",
     technologies: ["Kotlin", "Android Studio", "Git"],
-    image: "/placeholder.svg",
+    image: "/portfolio/lovable-uploads/protrackL.jpeg",
     links: {
-      github: "#",
+      github: "https://github.com/Sanmith2002/ProTrack",
       demo: "#",
     },
   },
@@ -39,9 +39,9 @@ const projects = [
     description:
       "A Java-based web application with dashboards for customers, agents, and admins, enabling customer queries for registered companies.",
     technologies: ["Java", "JSP", "Bootstrap", "Eclipse", "Git"],
-    image: "/placeholder.svg",
+    image: "/portfolio/lovable-uploads/quickassist.jpeg",
     links: {
-      github: "#",
+      github: "https://github.com/Sanmith2002/QuickAssist",
       demo: "#",
     },
   },

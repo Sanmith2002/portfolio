@@ -6,12 +6,12 @@ const skillCategories = [
   {
     name: "Languages",
     icon: <Terminal className="text-neon-blue" size={24} />,
-    skills: ["Java", "Kotlin", "JavaScript", "Python", "HTML/CSS"],
+    skills: ["Java", "Kotlin", "JavaScript", "HTML/CSS"],
   },
   {
     name: "Full-Stack Development",
     icon: <Code className="text-neon-blue" size={24} />,
-    skills: ["MERN Stack", "MongoDB", "Express.js", "React.js", "Node.js"],
+    skills: ["MERN Stack"],
   },
   {
     name: "Frontend Technologies",

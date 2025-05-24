@@ -20,7 +20,6 @@ const educationItems = [
   },
   {
     degree: "G. C. E. Ordinary Level",
-    institution: "Bandaranayake College",
     period: "2018",
     icon: Award,
   },

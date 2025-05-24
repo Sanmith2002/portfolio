@@ -115,16 +115,26 @@ const Hero = () => {
           <div className="pt-6 animate-fade-in-up animate-delay-500 animate-fill-both animate-once">
             <Button
               className="bg-neon-blue hover:bg-neon-dark text-white rounded-full px-8 py-6 mr-4 shadow-lg shadow-neon-blue/20"
-              asChild
+              onClick={(e) => {
+                e.preventDefault();
+                const section = document.getElementById("contact");
+                if (section) section.scrollIntoView({ behavior: "smooth" });
+              }}
             >
-              <a href="#contact">Contact Me</a>
+              Contact Me
             </Button>
             <Button
               variant="outline"
               className="rounded-full px-8 py-6 border-neon-blue/50 text-neon-blue hover:bg-neon-blue/10 shadow-lg"
-              asChild
+              onClick={(e) => {
+                e.preventDefault();
+                const section = document.getElementById("projects");
+                if (section) {
+                  section.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
             >
-              <a href="#projects">My Projects</a>
+              My Projects
             </Button>
           </div>
         </div>
