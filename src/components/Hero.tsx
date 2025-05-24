@@ -72,7 +72,7 @@ const Hero = () => {
           
           {/* Tech Stack Icons */}
           <div className="flex flex-wrap justify-center gap-3 py-6 animate-fade-in-up animate-delay-400 animate-fill-both animate-once">
-            {["React", "Node.js", "MongoDB", "Python", "Java"].map((tech) => (
+            {["MERN Stack", "Kotlin", "Java"].map((tech) => (
               <div key={tech} className="px-4 py-2 bg-secondary rounded-full flex items-center space-x-2 border border-neon-blue/20">
                 <Code size={16} className="text-neon-blue" />
                 <span>{tech}</span>
@@ -91,7 +91,7 @@ const Hero = () => {
                 <Mail size={20} />
               </Button>
             </a>
-            <a href="https://github.com/GitHub" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href="https://github.com/Sanmith2002" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <Button
                 variant="outline"
                 size="icon"
@@ -100,7 +100,7 @@ const Hero = () => {
                 <Github size={20} />
               </Button>
             </a>
-            <a href="https://linkedin.com/in/LinkedIn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/dinura-sanmith-9a3917296/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <Button
                 variant="outline"
                 size="icon"
