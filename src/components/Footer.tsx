@@ -10,7 +10,15 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
-            <a href="#home" className="text-2xl font-display font-bold">
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                const el = document.getElementById("home");
+                if (el) el.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="text-2xl font-display font-bold"
+            >
               <span className="text-neon-blue">Dinura</span> Sanmith
             </a>
             <p className="text-muted-foreground mt-2 text-balance">
@@ -22,12 +30,72 @@ const Footer = () => {
             <div>
               <h3 className="font-semibold mb-3">Quick Links</h3>
               <div className="grid grid-cols-2 gap-x-8 gap-y-2">
-                <a href="#home" className="text-muted-foreground hover:text-neon-blue transition-colors">Home</a>
-                <a href="#about" className="text-muted-foreground hover:text-neon-blue transition-colors">About</a>
-                <a href="#skills" className="text-muted-foreground hover:text-neon-blue transition-colors">Skills</a>
-                <a href="#experience" className="text-muted-foreground hover:text-neon-blue transition-colors">Experience</a>
-                <a href="#education" className="text-muted-foreground hover:text-neon-blue transition-colors">Education</a>
-                <a href="#projects" className="text-muted-foreground hover:text-neon-blue transition-colors">Projects</a>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const el = document.getElementById("home");
+                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="text-muted-foreground hover:text-neon-blue transition-colors"
+                >
+                  Home
+                </a>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const el = document.getElementById("about");
+                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="text-muted-foreground hover:text-neon-blue transition-colors"
+                >
+                  About
+                </a>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const el = document.getElementById("skills");
+                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="text-muted-foreground hover:text-neon-blue transition-colors"
+                >
+                  Skills
+                </a>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const el = document.getElementById("experience");
+                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="text-muted-foreground hover:text-neon-blue transition-colors"
+                >
+                  Experience
+                </a>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const el = document.getElementById("education");
+                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="text-muted-foreground hover:text-neon-blue transition-colors"
+                >
+                  Education
+                </a>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const el = document.getElementById("projects");
+                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="text-muted-foreground hover:text-neon-blue transition-colors"
+                >
+                  Projects
+                </a>
               </div>
             </div>
             
@@ -42,7 +110,7 @@ const Footer = () => {
                   <Mail size={18} />
                 </a>
                 <a 
-                  href="https://github.com/GitHub" 
+                  href="https://github.com/Sanmith2002" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-neon-blue/10 flex items-center justify-center text-neon-blue hover:bg-neon-blue hover:text-white transition-colors"
@@ -51,7 +119,7 @@ const Footer = () => {
                   <Github size={18} />
                 </a>
                 <a 
-                  href="https://linkedin.com/in/LinkedIn" 
+                  href="https://www.linkedin.com/in/dinura-sanmith-9a3917296/" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-neon-blue/10 flex items-center justify-center text-neon-blue hover:bg-neon-blue hover:text-white transition-colors"

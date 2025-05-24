@@ -89,11 +89,15 @@ const About = () => {
                   </div>
                   <div className="bg-background p-3 rounded flex items-center space-x-2">
                     <div className="w-2 h-2 bg-wood rounded-full"></div>
-                    <span>Web Development</span>
+                    <span>Full Stack Developments</span>
                   </div>
                   <div className="bg-background p-3 rounded flex items-center space-x-2">
                     <div className="w-2 h-2 bg-wood rounded-full"></div>
                     <span>Mobile Apps</span>
+                  </div>
+                  <div className="bg-background p-3 rounded flex items-center space-x-2">
+                    <div className="w-2 h-2 bg-wood rounded-full"></div>
+                    <span>Web Applicatons</span>
                   </div>
                   <div className="bg-background p-3 rounded flex items-center space-x-2">
                     <div className="w-2 h-2 bg-wood rounded-full"></div>
